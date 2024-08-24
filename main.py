@@ -36,3 +36,13 @@ class Weapon(ABC):
     def attack(self):
         pass
 
+# Класс Sword, который реализует атаку с использованием меча.
+class Sword(Weapon):
+    def attack(self):
+        return "наносит удар мечом"
+
+# Класс Bow, который реализует атаку с использованием лука.
+class Bow(Weapon):
+    def attack(self):
+        return "стреляет из лука"
+
