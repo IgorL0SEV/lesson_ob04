@@ -63,3 +63,13 @@ class Fighter:
             print(f"{self.name} {self.weapon.attack()}.")
         else:
             print(f"{self.name} не имеет оружия для атаки.")
+
+
+# Класс Monster представляет монстра.
+class Monster:
+    def __init__(self, name):
+        self.name = name
+
+    # Метод, который описывает, что монстр побежден
+    def defeat(self):
+        print(f"{self.name} побежден!")
