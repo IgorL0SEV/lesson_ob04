@@ -46,3 +46,20 @@ class Bow(Weapon):
     def attack(self):
         return "стреляет из лука"
 
+# Класс Fighter представляет бойца и содержит ссылку на объект Weapon.
+class Fighter:
+    def __init__(self, name):
+        self.name = name
+        self.weapon = None  # Оружие по умолчанию отсутствует
+
+    # Метод для смены оружия бойца
+    def change_weapon(self, weapon):
+        self.weapon = weapon
+        print(f"{self.name} выбирает {self.weapon.__class__.__name__.lower()}.")
+
+    # Метод для выполнения атаки
+    def attack(self):
+        if self.weapon:
+            print(f"{self.name} {self.weapon.attack()}.")
+        else:
+            print(f"{self.name} не имеет оружия для атаки.")
