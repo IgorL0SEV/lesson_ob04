@@ -73,3 +73,22 @@ class Monster:
     # Метод, который описывает, что монстр побежден
     def defeat(self):
         print(f"{self.name} побежден!")
+
+# Функция для демонстрации боя между бойцом и монстром
+def fight(fighter, monster):
+    fighter.attack()
+    monster.defeat()
+
+# Создаем бойца и монстра
+fighter = Fighter("Боец")
+monster = Monster("Монстр")
+
+# Демонстрируем бой с разным оружием
+sword = Sword()
+bow = Bow()
+
+fighter.change_weapon(sword)
+fight(fighter, monster)
+
+fighter.change_weapon(bow)
+fight(fighter, monster)
