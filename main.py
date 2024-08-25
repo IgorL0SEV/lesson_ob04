@@ -41,10 +41,16 @@ class Sword(Weapon):
     def attack(self):
         return "наносит удар мечом"
 
+    def __str__(self):
+        return "меч"
+
 # Класс Bow, который реализует атаку с использованием лука.
 class Bow(Weapon):
     def attack(self):
         return "стреляет из лука"
+
+    def __str__(self):
+        return "лук"
 
 # Класс Fighter представляет бойца и содержит ссылку на объект Weapon.
 class Fighter:
@@ -55,7 +61,7 @@ class Fighter:
     # Метод для смены оружия бойца
     def change_weapon(self, weapon):
         self.weapon = weapon
-        print(f"{self.name} выбирает {self.weapon.__class__.__name__.lower()}.")
+        print(f"{self.name} выбирает {self.weapon}.") # упрощена после добавления str
 
     # Метод для выполнения атаки
     def attack(self):
