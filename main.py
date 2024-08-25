@@ -56,6 +56,7 @@ class Fighter:
     def change_weapon(self, weapon):
         self.weapon = weapon
         print(f"{self.name} выбирает {self.weapon.__class__.__name__.lower()}.")
+        # использует в выводе оружия название класса, приведенного в нижнему регистру
 
     # Метод для выполнения атаки
     def attack(self):
